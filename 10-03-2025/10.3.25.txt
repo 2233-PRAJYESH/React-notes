@@ -1,0 +1,31 @@
+Map Function: The map function is generally used to render the list items dynamically in react.
+> This function iterates over the array and each iteration returns the JSX for respective item. 
+> It helps to render and display the list efficiently.
+
+    Syntax:
+
+        arrayName.map((value, index) => (
+            // HTML Code...
+
+            <div key="unqiueName">
+            
+            </div>
+        ));
+
+Use State: State is a way to store and update data within a component. 
+
+    Syntax:
+
+        import { useState } from 'react';
+
+        const [state, setState] = useState(initialValue);
+
+        const [filteredClothes, setFilteredClothes] = useState([]);
+
+        To retrieve value from state variable:
+
+            filteredClothes
+
+        To update value of a state variable:
+
+            setFilteredClothes(value);

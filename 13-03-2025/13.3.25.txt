@@ -1,0 +1,78 @@
+Single Page Application (SPA): Routing
+
+    index.html
+
+        <div id="root">
+
+        </div>
+
+
+To navigate between the pages:
+
+Traditional Navigation (Using Anchor) - It completely navigates from current page to another page.
+
+React Routing - Instead of navigating it replace the current page source code in index.html with another page source code.
+
+> When we use react routing, navigation time will be reduced, since app is not rerender every time when we navigate.
+
+    Installation:
+
+        npm install react-router-dom
+
+BrowserRouter: Used to remember the history of the navigation.
+
+    App.jsx
+
+    import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes> - Parent of all the routes
+                    <Route path="/route-name" element={<ComponentName/>} /> - Each route
+                    <Route path="/route-name" element={<ComponentName/>} />
+                    <Route path="/route-name" element={<ComponentName/>} />
+                </Routes>
+            
+            
+            </BrowserRouter>    
+        </div>
+
+    )
+
+    To switch from Js to HTML - ()
+
+    To switch from HTML to JS - {}
+
+Link: To navigate from current page to another page. (Static Navigation)
+
+    import { Link } from 'react-router-dom';
+
+    <Link to="/route-name">Content here...</Link>
+
+useNavigate: To navigate from current page to another page. (Programmatic Navigation)
+
+    import { useNavigate } from 'react-router-dom';
+
+    const navigate = useNavigate();
+
+    navigate('/route-name');
+
+Nested Routing: Configuring multiple route under a route.
+
+    Syntax:
+
+        <Routes> - Parent of all the routes
+            <Route path="/route-name" element={<ComponentName/>}/> - Each route
+            <Route path="/route-name" element={<ComponentName/>}> - Main Route
+                <Route path="route-name" element={<ComponentName/>} /> - Nested Route
+                <Route path="route-name" element={<ComponentName/>} />
+                <Route path="route-name" element={<ComponentName/>} />
+            </Route>
+            <Route path="/route-name" element={<ComponentName/>} />
+        </Routes>
+
+
+            /route-name/route-name

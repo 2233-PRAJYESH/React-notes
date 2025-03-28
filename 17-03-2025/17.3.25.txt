@@ -1,0 +1,53 @@
+How to pass parameters in route.
+
+1. Route Parameters
+2. Query Parameters
+
+
+    http://localhost:5173/route-name/route-param-value1/route-param-value2?queryParam1=value1&queryParam2=value2
+
+        route-param-value1/route-param-value2 - Route Parameters
+
+            - Suitable for passing lesser values in the url.
+
+        queryParam1=value1&queryParam2=value2 - Query Parameters
+
+            - Suitable for passing more no of values in the url.
+
+useParams: To retrieve route parameters which are available in current url.
+
+    Syntax:
+
+        import { useParams } from 'react-router-dom';
+
+        const params = useParams();
+
+        params.id;
+
+useSearchParams: To retrieve query parameters which are available in current url.
+
+    Syntax:
+
+        import { useSearchParams } from 'react-router-dom';
+
+        const [searchParams, setSearchParams] = useSearchParams();
+
+        searchParams.get('queryParam');
+
+Styling Functional Components
+
+> Inline styles with JSX
+
+    Syntax:
+
+        <h1 style={{backgroundColor: 'red', color: 'gray', fontSize: '20px'}}></h1>
+
+
+CSS Modules for local styles
+
+    fileName.css
+
+
+    fileName.jsx
+
+    import 'relativePathofCSS';

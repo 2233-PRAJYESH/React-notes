@@ -1,0 +1,33 @@
+Axios: Promise based HTTP client for the browser and node.js.
+
+    Installation:
+
+        npm install axios
+
+    import axios from 'axios';
+
+    const functionName = async () => {
+        try {
+            const response = await axios.get(url);
+            const response = await axios.post(url, payload);
+
+            const response = await axios.put(url, payload);
+
+            const response = await axios.delete(url);
+            
+        } catch(error) {
+
+        }
+
+    };
+
+
+    fetch(url, { method: 'GET' }); - Retrieval
+
+    const response = await fetch(url, { method: 'POST', content-type: 'application/json', body: JSON.stringify(payload) }); - Creation
+
+    const parsedResponse = await response.json();
+
+    fetch(url, { method: 'PUT', content-type: 'application/json', body: JSON.stringify(payload) }); - Updation
+
+    http://localhost:4000/groceries?category=fghj

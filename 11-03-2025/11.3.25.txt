@@ -1,0 +1,45 @@
+React Hooks (Functions)
+1. useState
+2. useEffect
+
+Use Effect: In React, useEffect is a hook that allows you to perform side effects in your components. 
+
+    Side effects include fetching data, updating the DOM, and using timers. 
+
+    Syntax:
+
+        import { useEffect } from 'react';
+
+        useEffect(callbackFunc, dependencies);
+
+        
+        Statements present in callback function, will be executed on load of the component.
+
+            useEffect(() => {
+                // Statements...
+            }, []); 
+
+        Statements present in callback function, will be executed on load of the component as well as on change of value of dependencies.
+
+            useEffect(() => {
+                // Statements...
+            }, [dependency1, dependency2, ..., dependencyN]); 
+
+
+            dependencies - State Variables
+
+
+            useEffect(() => {
+                // Statements...
+
+                return () => {
+                    // Statements present in this, will be executed on destroy of the component.
+
+                }
+            }, [dependency1, dependency2, ..., dependencyN]); 
+
+Task:
+
+    Build user list page
+
+    API Url: https://jsonplaceholder.typicode.com/users

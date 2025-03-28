@@ -1,0 +1,66 @@
+React Hook Form: Simple form validation with React Hook Form.
+
+    Installation:
+
+        npm install react-hook-form
+
+    
+    Component.jsx
+
+    import { useForm } from 'react-hook-form';
+
+    const { register, formState: { errors }, handleSubmit, watch } = useForm();
+
+
+    // Internal Implementation:
+    function useForm() {
+
+        return {
+            register: () => { },
+            formState: {
+                errors: function() => {
+
+                }
+            },
+            handleSubmit: function() => {
+
+            },
+            watch: function() => {
+
+            }
+        }
+    }
+
+    register - For registrating form field.
+
+    formState - Returns the current state of the form.
+
+    errors - Returns the errors of the form fields.
+
+    handleSubmit - To submit the form.
+
+    watch - It monitors the value of the form field, and returns the current value.
+
+    Register function:
+
+        Syntax:
+
+          const registerUser = function(formValues) {
+
+          }
+
+           <form onSubmit={handleSubmit(registerUser)}>
+                <input type="text" {...register(formFieldName, { required: { value: true, message: 'Field is required' }, pattern: { value: //, message: 'Field is required' }})}/>
+            
+                <button type="submit">Submit</button>
+            </form>
+
+Task: Create voter registration form
+
+    Full Name (name) – Text input
+    Date of Birth (dob) – Date picker
+    Gender (gender) – Radio buttons (Male, Female, Other)
+    Father's/Mother's/Guardian's Name (guardianName) – Text input
+    2️⃣ Contact Details
+    Mobile Number (mobile) – Number input (Use India mobile regex)
+    Pincode (pincode) – Number input (6-digit validation)

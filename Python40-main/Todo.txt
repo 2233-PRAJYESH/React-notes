@@ -1,0 +1,13 @@
+# comprehensions
+# iterator, generator, generator comprehension
+# map(), filter()
+# file handling and exception handling
+# modules (os module, user-defined module)
+# oops
+# strings and regex
+# Web Scarping (2 hrs) : (Pre: HTML, CSS, Bootstrap)
+
+# Power BI (Session)
+# AWS (Sessions)
+
+# Django Classes

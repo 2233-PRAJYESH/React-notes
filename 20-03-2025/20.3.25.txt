@@ -1,0 +1,48 @@
+useReducer: In React, useReducer is a Hook that provides an alternative to useState for managing state, particularly when dealing with complex state logic or multiple state values that depend on each other.
+
+    Syntax:
+
+        function reducerFunc() {
+
+        }
+
+        import { useReducer } from 'react';
+
+        const [state, dispatch] = useReducer(reducerFunc, initialValue);
+
+        state - Returns the current value of variable
+
+        dispatch - To update the value of the variable.
+
+        reducerFunc - To write complex logic to update the state.
+
+        initialValue - Initial value.
+
+useState
+
+    const [state, setState] = useState(initialValue);
+
+    
+    Cart:
+
+        Products
+
+            Quantity: 1
+
+                Increment Quantity
+
+                Decrement Quantity
+
+            Delete Product
+
+        const incrementQuantity = () => {
+
+        };
+
+        const decrementQuantity = () => {
+
+        }
+
+        const deleteProduct = () => {
+
+        }
