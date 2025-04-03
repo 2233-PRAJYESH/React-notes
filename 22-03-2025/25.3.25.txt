@@ -1,0 +1,26 @@
+Code splitting and lazy loading with React Suspense
+
+> In React, lazy loading is a performance optimization technique that defers the loading of components or resources until 
+they are actually needed, reducing the initial load time and improving user experience. 
+
+    50 Components.
+
+    3 Components
+
+    50 * 5 KB = 250 KB
+
+    3 * 5 KB = 15 KB
+
+
+    Syntax:
+
+        import { lazy, Suspense } from 'react';
+
+
+        const componentName = lazy(() => import(relativePathOfComponent));        
+
+
+        <Suspense fallback={<Loading />}>
+          <h2>Preview</h2>
+          <MarkdownPreview markdown={markdown} />
+        </Suspense>
